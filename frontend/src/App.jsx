@@ -1,4 +1,3 @@
-import { React } from 'react'
 import './App.scss'
 import { NavBar } from './components/NavBar/NavBar'
 import { InventoryTracker } from './components/InventoryTracker/InventoryTracker'
@@ -9,7 +8,7 @@ const App = () => {
         <div className="app">
             <NavBar />
             <ItemLocator />
-            {/* <InventoryTracker /> */}
+            {/* Earlier design iteration, not used in the study: <InventoryTracker /> */}
         </div>
     );
 }

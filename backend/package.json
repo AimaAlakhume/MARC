@@ -1,20 +1,24 @@
 {
-  "name": "ccr_web_backend",
+  "name": "cuebot-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "CueBot backend: inventory data, item images, and speech clips for the web interface",
+  "main": "server.js",
   "type": "module",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:layperson": "CUEBOT_CART=layperson node server.js",
+    "start:rn": "CUEBOT_CART=rn node server.js",
+    "dev": "node --watch server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "Anonymous",
+  "license": "MIT",
   "dependencies": {
-    "axios": "^1.7.7",
+    "cors": "^2.8.5",
     "express": "^4.21.1",
-    "path": "^0.12.7",
     "socket.io": "^4.8.1"
-  },
-  "keywords": [],
-  "description": ""
+  }
 }

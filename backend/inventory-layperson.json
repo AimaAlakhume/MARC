@@ -1,0 +1,241 @@
+{
+  "inventory": [
+    {
+      "drawer": 1,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "Pliers",
+          "count": 2,
+          "image": "/public/images-layperson/pliers.png",
+          "audio": "/public/audio-layperson/1-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "Mouse",
+          "count": 4,
+          "image": "/public/images-layperson/mouse.png",
+          "audio": "/public/audio-layperson/1-2.mp3"
+        },
+        {
+          "compartment": 3,
+          "item": "Goggles",
+          "count": 2,
+          "image": "/public/images-layperson/goggles.png",
+          "audio": "/public/audio-layperson/1-3.mp3"
+        },
+        {
+          "compartment": 4,
+          "item": "Craft Knife",
+          "count": 3,
+          "image": "/public/images-layperson/craft-knife.png",
+          "audio": "/public/audio-layperson/1-4.mp3"
+        }
+      ]
+    },
+    {
+      "drawer": 2,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "Wire",
+          "count": 5,
+          "image": "/public/images-layperson/wire.png",
+          "audio": "/public/audio-layperson/2-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "Power Bank",
+          "count": 3,
+          "image": "/public/images-layperson/power-bank.png",
+          "audio": "/public/audio-layperson/2-2.mp3"
+        },
+        {
+          "compartment": 3,
+          "item": "Scotch Tape",
+          "count": 2,
+          "image": "/public/images-layperson/scotch-tape.png",
+          "audio": "/public/audio-layperson/2-3.mp3"
+        },
+        {
+          "compartment": 4,
+          "item": "Game Controller",
+          "count": 1,
+          "image": "/public/images-layperson/controller.png",
+          "audio": "/public/audio-layperson/2-4.mp3"
+        },
+        {
+          "compartment": 5,
+          "item": "Scissors",
+          "count": 1,
+          "image": "/public/images-layperson/scissors.png",
+          "audio": "/public/audio-layperson/2-5.mp3"
+        },
+        {
+          "compartment": 6,
+          "item": "White Glue",
+          "count": 1,
+          "image": "/public/images-layperson/white-glue.png",
+          "audio": "/public/audio-layperson/2-6.mp3"
+        }
+      ]
+    },
+    {
+      "drawer": 3,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "Super Glue",
+          "count": 1,
+          "image": "/public/images-layperson/super-glue.png",
+          "audio": "/public/audio-layperson/3-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "Sharpie",
+          "count": 1,
+          "image": "/public/images-layperson/sharpie.png",
+          "audio": "/public/audio-layperson/3-2.mp3"
+        },
+        {
+          "compartment": 3,
+          "item": "HDMI Cable",
+          "count": 2,
+          "image": "/public/images-layperson/hdmi.png",
+          "audio": "/public/audio-layperson/3-3.mp3"
+        },
+        {
+          "compartment": 4,
+          "item": "Pencil",
+          "count": 11,
+          "image": "/public/images-layperson/pencil.png",
+          "audio": "/public/audio-layperson/3-4.mp3"
+        },
+        {
+          "compartment": 5,
+          "item": "Battery",
+          "count": 2,
+          "image": "/public/images-layperson/battery.png",
+          "audio": "/public/audio-layperson/3-5.mp3"
+        },
+        {
+          "compartment": 6,
+          "item": "Screw",
+          "count": 10,
+          "image": "/public/images-layperson/screw.png",
+          "audio": "/public/audio-layperson/3-6.mp3"
+        },
+        {
+          "compartment": 7,
+          "item": "Marker",
+          "count": 3,
+          "image": "/public/images-layperson/marker.png",
+          "audio": "/public/audio-layperson/3-7.mp3"
+        },
+        {
+          "compartment": 8,
+          "item": "SD Card",
+          "count": 3,
+          "image": "/public/images-layperson/sd-card.png",
+          "audio": "/public/audio-layperson/3-8.mp3"
+        }
+      ]
+    },
+    {
+      "drawer": 4,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "Gloves",
+          "count": 2,
+          "image": "/public/images-layperson/glove.png",
+          "audio": "/public/audio-layperson/4-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "Spray",
+          "count": 2,
+          "image": "/public/images-layperson/spray.png",
+          "audio": "/public/audio-layperson/4-2.mp3"
+        },
+        {
+          "compartment": 3,
+          "item": "Stapler",
+          "count": 1,
+          "image": "/public/images-layperson/stapler.png",
+          "audio": "/public/audio-layperson/4-3.mp3"
+        },
+        {
+          "compartment": 4,
+          "item": "Spanner",
+          "count": 2,
+          "image": "/public/images-layperson/spanner.png",
+          "audio": "/public/audio-layperson/4-4.mp3"
+        },
+        {
+          "compartment": 5,
+          "item": "Tape Measure",
+          "count": 1,
+          "image": "/public/images-layperson/tape-measure.png",
+          "audio": "/public/audio-layperson/4-5.mp3"
+        },
+        {
+          "compartment": 6,
+          "item": "Screwdriver",
+          "count": 2,
+          "image": "/public/images-layperson/screwdriver.png",
+          "audio": "/public/audio-layperson/4-6.mp3"
+        }
+      ]
+    },
+    {
+      "drawer": 5,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "Extension Box",
+          "count": 1,
+          "image": "/public/images-layperson/extension-box.png",
+          "audio": "/public/audio-layperson/5-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "Glue Gun",
+          "count": 2,
+          "image": "/public/images-layperson/glue-gun.png",
+          "audio": "/public/audio-layperson/5-2.mp3"
+        },
+        {
+          "compartment": 3,
+          "item": "Camera",
+          "count": 3,
+          "image": "/public/images-layperson/camera.png",
+          "audio": "/public/audio-layperson/5-3.mp3"
+        },
+        {
+          "compartment": 4,
+          "item": "Edge Guard",
+          "count": 7,
+          "image": "/public/images-layperson/edge-guard.png",
+          "audio": "/public/audio-layperson/5-4.mp3"
+        }
+      ]
+    }
+  ],
+  "ledStates": [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "isDeprecated": [
+    false,
+    false,
+    false,
+    true,
+    false,
+    true
+  ]
+}

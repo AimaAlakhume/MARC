@@ -1,3 +1,6 @@
+// CueBot backend: serves the cart inventory, item images, and speech clips
+// to the web interface, and relays inventory/LED state updates over Socket.IO.
+
 import express from 'express';
 import http from 'http';
 import { Server } from 'socket.io';
@@ -9,32 +12,39 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Which cart layout to load: "layperson" (general-purpose supplies) or
+// "rn" (medical crash-cart supplies). Set with the CUEBOT_CART variable.
+const CART = process.env.CUEBOT_CART || 'layperson';
+const PORT = Number(process.env.PORT) || 8080;
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || 'http://localhost:5173';
+
+const inventoryFile = path.join(__dirname, `inventory-${CART}.json`);
+if (!fs.existsSync(inventoryFile)) {
+    console.error(`Unknown cart "${CART}". Expected a file named inventory-${CART}.json in ${__dirname}.`);
+    process.exit(1);
+}
+
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173',
+        origin: FRONTEND_ORIGIN,
         methods: ['GET', 'POST']
     }
 });
 
-const PORT = 8080;
-
 app.use(express.json());
 app.use(cors());
-app.use(['/public/images'], express.static(path.join(__dirname, 'public/images')));
-app.use(['/public/audio'], express.static(path.join(__dirname, 'public/audio')));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../ccr_web_frontend/index.html'));
-});
+// Item images and speech clips for both carts.
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 let currentInventory = [];
 let currentLedStates = [];
 let currentDeprecatedStates = [];
 
 const loadInventoryData = () => {
-    const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'inventory.json'), 'utf8'));
+    const data = JSON.parse(fs.readFileSync(inventoryFile, 'utf8'));
     currentInventory = data.inventory;
     currentLedStates = data.ledStates;
     currentDeprecatedStates = data.isDeprecated;
@@ -42,20 +52,29 @@ const loadInventoryData = () => {
 
 loadInventoryData();
 
+// Asset paths in the inventory files are relative (e.g. /public/images-rn/n95.png).
+// Turn them into full URLs so the browser can load them from this server.
+const withAbsoluteUrls = (inventory, baseUrl) =>
+    inventory.map((drawer) => ({
+        ...drawer,
+        compartments: drawer.compartments.map((c) => ({
+            ...c,
+            image: c.image && c.image.startsWith('/') ? `${baseUrl}${c.image}` : c.image,
+            audio: c.audio && c.audio.startsWith('/') ? `${baseUrl}${c.audio}` : c.audio
+        }))
+    }));
+
 io.on('connection', (socket) => {
     console.log('Client connected:', socket.id);
 
+    // A client can push updated inventory and LED state; it is stored and
+    // broadcast to every connected interface.
     socket.on('data', (data) => {
-        console.log('Received data:', data);
         const { inventory, ledStates, isDeprecated } = data;
-        
+
         currentInventory = inventory;
         currentLedStates = ledStates;
         currentDeprecatedStates = isDeprecated;
-
-        inventory.forEach((item, index) => {
-            console.log(`Compartment ${index + 1} - ${item.name}: ${item.count}, LED: ${ledStates[index] ? 'On' : 'Off'}, Deprecated: ${isDeprecated[index]}`);
-        });
 
         io.emit('data', data);
     });
@@ -67,8 +86,10 @@ io.on('connection', (socket) => {
 
 app.get('/api/data', (req, res) => {
     try {
+        const baseUrl = `${req.protocol}://${req.get('host')}`;
         res.json({
-            inventory: currentInventory,
+            cart: CART,
+            inventory: withAbsoluteUrls(currentInventory, baseUrl),
             ledStates: currentLedStates,
             isDeprecated: currentDeprecatedStates
         });
@@ -78,10 +99,6 @@ app.get('/api/data', (req, res) => {
     }
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../ccr_web_frontend/index.html'));
-});
-
 server.listen(PORT, () => {
-    console.log(`Web server listening on port ${PORT}`);
+    console.log(`CueBot backend listening on http://localhost:${PORT} (cart: ${CART})`);
 });

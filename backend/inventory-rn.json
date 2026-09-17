@@ -1,0 +1,220 @@
+{
+  "inventory": [
+    {
+      "drawer": 1,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "Albuterol (NEB 0.083%, 3ml)",
+          "count": 3,
+          "image": "/public/images-rn/albuterol.png",
+          "audio": "/public/audio-rn/1-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "Sodium bicarbonate (50 mEq/50 ml V)",
+          "count": 1,
+          "image": "/public/images-rn/sodium-bicarbonate.png",
+          "audio": "/public/audio-rn/1-2.mp3"
+        },
+        {
+          "compartment": 3,
+          "item": "Atropine Sulfate (1mg/10 ml DU)",
+          "count": 2,
+          "image": "/public/images-rn/atropine-sulfate.png",
+          "audio": "/public/audio-rn/1-3.mp3"
+        },
+        {
+          "compartment": 4,
+          "item": "Lidocaine HCL (100 mg/5 ml DU)",
+          "count": 2,
+          "image": "/public/images-rn/lidocaine.png",
+          "audio": "/public/audio-rn/1-4.mp3"
+        },
+        {
+          "compartment": 5,
+          "item": "Magnesium Sulfate (500 mg/ml, 2ml Vial)",
+          "count": 4,
+          "image": "/public/images-rn/mg-sulfate.png",
+          "audio": "/public/audio-rn/1-5.mp3"
+        },
+        {
+          "compartment": 6,
+          "item": "Epinephrine HCL (1 mg/10 ml DU)",
+          "count": 2,
+          "image": "/public/images-rn/epinephrine.png",
+          "audio": "/public/audio-rn/1-6.mp3"
+        },
+        {
+          "compartment": 7,
+          "item": "Methylprednisolone (125 mg/2 ml)",
+          "count": 2,
+          "image": "/public/images-rn/methylpred.png",
+          "audio": "/public/audio-rn/1-7.mp3"
+        },
+        {
+          "compartment": 8,
+          "item": "Furosemide (10 mg/ml, 4ml vial)",
+          "count": 2,
+          "image": "/public/images-rn/furosemide.png",
+          "audio": "/public/audio-rn/1-8.mp3"
+        }
+      ]
+    },
+    {
+      "drawer": 2,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "6 mL Syringe",
+          "count": 5,
+          "image": "/public/images-rn/6ml-syringe.png",
+          "audio": "/public/audio-rn/2-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "12 mL Syringe",
+          "count": 1,
+          "image": "/public/images-rn/12ml-syringe.png",
+          "audio": "/public/audio-rn/2-2.mp3"
+        },
+        {
+          "compartment": 3,
+          "item": "3-way Stopcock",
+          "count": 1,
+          "image": "/public/images-rn/stopcock.png",
+          "audio": "/public/audio-rn/2-3.mp3"
+        },
+        {
+          "compartment": 4,
+          "item": "Filter Straw",
+          "count": 3,
+          "image": "/public/images-rn/filter-straw.png",
+          "audio": "/public/audio-rn/2-4.mp3"
+        },
+        {
+          "compartment": 5,
+          "item": "Adenosine (6 mg/2 mL)",
+          "count": 3,
+          "image": "/public/images-rn/adenosine.png",
+          "audio": "/public/audio-rn/2-5.mp3"
+        },
+        {
+          "compartment": 6,
+          "item": "Alcohol Prep (2 Ply, Large)",
+          "count": 4,
+          "image": "/public/images-rn/alcohol-prep.png",
+          "audio": "/public/audio-rn/2-6.mp3"
+        }
+      ]
+    },
+    {
+      "drawer": 3,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "0.9% Sodium Chloride Injection USP (500 mL)",
+          "count": 2,
+          "image": "/public/images-rn/sodium-chloride.png",
+          "audio": "/public/audio-rn/3-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "5% Dextrose Injection USP (500 mL)",
+          "count": 1,
+          "image": "/public/images-rn/dextrose.png",
+          "audio": "/public/audio-rn/3-2.mp3"
+        }
+      ]
+    },
+    {
+      "drawer": 4,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "60 mL Syringe",
+          "count": 1,
+          "image": "/public/images-rn/60ml-syringe.png",
+          "audio": "/public/audio-rn/4-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "Push Button Blood Collection Set",
+          "count": 2,
+          "image": "/public/images-rn/push-button.png",
+          "audio": "/public/audio-rn/4-2.mp3"
+        },
+        {
+          "compartment": 3,
+          "item": "3 mL Applicator",
+          "count": 2,
+          "image": "/public/images-rn/3ml-applicator.png",
+          "audio": "/public/audio-rn/4-3.mp3"
+        },
+        {
+          "compartment": 4,
+          "item": "Transparent Film Dressing",
+          "count": 3,
+          "image": "/public/images-rn/dressing.png",
+          "audio": "/public/audio-rn/4-4.mp3"
+        },
+        {
+          "compartment": 5,
+          "item": "Shielded IV Catheter",
+          "count": 1,
+          "image": "/public/images-rn/iv-catheter.png",
+          "audio": "/public/audio-rn/4-5.mp3"
+        }
+      ]
+    },
+    {
+      "drawer": 5,
+      "compartments": [
+        {
+          "compartment": 1,
+          "item": "Defib-Pads",
+          "count": 1,
+          "image": "/public/images-rn/defib-pads.png",
+          "audio": "/public/audio-rn/5-1.mp3"
+        },
+        {
+          "compartment": 2,
+          "item": "4.0 ETT UNCUFFED",
+          "count": 2,
+          "image": "/public/images-rn/ett.png",
+          "audio": "/public/audio-rn/5-2.mp3"
+        },
+        {
+          "compartment": 3,
+          "item": "PI Surgical Gloves",
+          "count": 3,
+          "image": "/public/images-rn/gloves.png",
+          "audio": "/public/audio-rn/5-3.mp3"
+        },
+        {
+          "compartment": 4,
+          "item": "N95 Respirator Mask",
+          "count": 3,
+          "image": "/public/images-rn/n95.png",
+          "audio": "/public/audio-rn/5-4.mp3"
+        }
+      ]
+    }
+  ],
+  "ledStates": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "isDeprecated": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ]
+}

@@ -1,6 +1,9 @@
+// Earlier design iteration (inventory tracker, Figure 2 left in the paper).
+// Not used in the study; enable it in App.jsx to view it.
 import './InventoryTracker.scss';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URL, getCartImage } from '../../config';
 import { InventoryCardsList } from '../InventoryCardsList/InventoryCardsList';
 import { InventoryCards } from '../InventoryCards/InventoryCards';
 
@@ -16,7 +19,7 @@ export const InventoryTracker = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/data');
+                const response = await axios.get(`${API_URL}/api/data`);
                 const { inventory, ledStates, isDeprecated } = response.data;
 
                 // Check if the response data is valid
@@ -39,7 +42,7 @@ export const InventoryTracker = () => {
     }, []);
 
     const handleRefresh = () => {
-        axios.get('http://localhost:8080/api/data')
+        axios.get(`${API_URL}/api/data`)
             .then(response => {
                 const { inventory, ledStates, isDeprecated } = response.data;
                 setInventory(inventory);
@@ -110,7 +113,7 @@ export const InventoryTracker = () => {
                     </div>
                     
                     <div className="crash-cart-visual">
-                        <img src="../../assets/crash-cart.jpg" alt="Crash Cart" className="crash-cart-image" />
+                        <img src={getCartImage()} alt="Crash Cart" className="crash-cart-image" />
                         <div className="hover-instruction">popup on hover: view full inventory</div>
                         
                         {selectedCompartment && (

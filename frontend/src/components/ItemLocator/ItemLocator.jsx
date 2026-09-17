@@ -1,7 +1,7 @@
 import './ItemLocator.scss';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import crashCartImage from '../../assets/images-v1/crash-cart.png';
+import { API_URL, getCartImage } from '../../config';
 import Switch from '@mui/material/Switch';
 import RefreshIcon from '../../assets/icons/refresh-icon.png';
 import closeIcon from '../../assets/icons/close-icon.png';
@@ -23,7 +23,7 @@ export const ItemLocator = () => {
     useEffect(() => {
         const fetchInventory = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/data');
+                const response = await axios.get(`${API_URL}/api/data`);
 
                 if (response.data && response.data.inventory) {
                     setInventory(response.data.inventory);
@@ -169,12 +169,7 @@ export const ItemLocator = () => {
         setSearchTerm('');
 
         if (result) {
-            import(`../../assets/images-v1/crash-cart-d${result.drawer}.png`)
-                .then((module) => setDrawerImageSrc(module.default))
-                .catch((err) => {
-                    console.error('Error loading image:', err);
-                    setDrawerImageSrc('');
-                });
+            setDrawerImageSrc(getCartImage(result.drawer));
         }
     }, [searchSubmitted, inventory]);
 
@@ -225,7 +220,7 @@ export const ItemLocator = () => {
         setError(null);
         setDrawerImageSrc('');
 
-        axios.get('http://localhost:8080/api/data')
+        axios.get(`${API_URL}/api/data`)
             .then(response => {
                 if (response.data && response.data.inventory) {
                     setInventory(response.data.inventory);
@@ -431,13 +426,13 @@ export const ItemLocator = () => {
                         <div className="result-display">
                             <div className="image-container">
                                 <img
-                                    src={drawerImageSrc || crashCartImage}
+                                    src={drawerImageSrc || getCartImage()}
                                     alt={`Drawer ${searchResult.drawer}`}
                                 />
                             </div>
                             <div className="popup">
                                 <div className="popup__content">
-                                    <img className="close-btn" src={closeIcon} onClick={clearSearch} />
+                                    <img className="close-btn" src={closeIcon} alt="Close" onClick={clearSearch} />
                                     <p className="popup__content__text">Drawer {searchResult.drawer}</p>
                                     <hr />
                                     <p className="popup__content__text">Compartment {searchResult.compartment}</p>
@@ -458,7 +453,7 @@ export const ItemLocator = () => {
                     ) : (
                         <div className="default-image">
                             <img
-                                src={crashCartImage}
+                                src={getCartImage()}
                                 alt="Crash Cart"
                             />
                         </div>
