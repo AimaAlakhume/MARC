@@ -1,0 +1,220 @@
+{
+    "inventory": [
+        {
+            "drawer": 1,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "Albuterol (NEB 0.083%, 3ml)",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/albuterol.png",
+                    "audio": "http://localhost:8080/public/audio/1-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "Sodium bicarbonate (50 mEq/50 ml V)",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/sodium-bicarbonate.png",
+                    "audio": "http://localhost:8080/public/audio/1-2.mp3"
+                },
+                {
+                    "compartment": 3,
+                    "item": "Atropine Sulfate (1mg/10 ml DU)",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/atropine-sulfate.png",
+                    "audio": "http://localhost:8080/public/audio/1-3.mp3"
+                },
+                {
+                    "compartment": 4,
+                    "item": "Lidocaine HCL (100 mg/5 ml DU)",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/lidocaine.png",
+                    "audio": "http://localhost:8080/public/audio/1-4.mp3"
+                },
+                {
+                    "compartment": 5,
+                    "item": "Magnesium Sulfate (500 mg/ml, 2ml Vial)",
+                    "count": 4,
+                    "image": "http://localhost:8080/public/images/mg-sulfate.png",
+                    "audio": "http://localhost:8080/public/audio/1-5.mp3"
+                },
+                {
+                    "compartment": 6,
+                    "item": "Epinephrine HCL (1 mg/10 ml DU)",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/epinephrine.png",
+                    "audio": "http://localhost:8080/public/audio/1-6.mp3"
+                },
+                {
+                    "compartment": 7,
+                    "item": "Methylprednisolone (125 mg/2 ml)",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/methylpred.png",
+                    "audio": "http://localhost:8080/public/audio/1-7.mp3"
+                },
+                {
+                    "compartment": 8,
+                    "item": "Furosemide (10 mg/ml, 4ml vial)",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/furosemide.png",
+                    "audio": "http://localhost:8080/public/audio/1-8.mp3"
+                }
+            ]
+        },
+        {
+            "drawer": 2,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "6 mL Syringe",
+                    "count": 5,
+                    "image": "http://localhost:8080/public/images/6ml-syringe.png",
+                    "audio": "http://localhost:8080/public/audio/2-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "12 mL Syringe",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/12ml-syringe.png",
+                    "audio": "http://localhost:8080/public/audio/2-2.mp3"
+                },
+                {
+                    "compartment": 3,
+                    "item": "3-way Stopcock",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/stopcock.png",
+                    "audio": "http://localhost:8080/public/audio/2-3.mp3"
+                },
+                {
+                    "compartment": 4,
+                    "item": "Filter Straw",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/filter-straw.png",
+                    "audio": "http://localhost:8080/public/audio/2-4.mp3"
+                },
+                {
+                    "compartment": 5,
+                    "item": "Adenosine (6 mg/2 mL)",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/adenosine.png",
+                    "audio": "http://localhost:8080/public/audio/2-5.mp3"
+                },
+                {
+                    "compartment": 6,
+                    "item": "Alcohol Prep (2 Ply, Large)",
+                    "count": 4,
+                    "image": "http://localhost:8080/public/images/alcohol-prep.png",
+                    "audio": "http://localhost:8080/public/audio/2-6.mp3"
+                }
+            ]
+        },
+        {
+            "drawer": 3,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "0.9% Sodium Chloride Injection USP (500 mL)",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/sodium-chloride.png",
+                    "audio": "http://localhost:8080/public/audio/3-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "5% Dextrose Injection USP (500 mL)",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/dextrose.png",
+                    "audio": "http://localhost:8080/public/audio/3-2.mp3"
+                }
+            ]
+        },
+        {
+            "drawer": 4,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "60 mL Syringe",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/60ml-syringe.png",
+                    "audio": "http://localhost:8080/public/audio/4-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "Push Button Blood Collection Set",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/push-button.png",
+                    "audio": "http://localhost:8080/public/audio/4-2.mp3"
+                },
+                {
+                    "compartment": 3,
+                    "item": "3 mL Applicator",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/3ml-applicator.png",
+                    "audio": "http://localhost:8080/public/audio/4-3.mp3"
+                },
+                {
+                    "compartment": 4,
+                    "item": "Transparent Film Dressing",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/dressing.png",
+                    "audio": "http://localhost:8080/public/audio/4-4.mp3"
+                },
+                {
+                    "compartment": 5,
+                    "item": "Shielded IV Catheter",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/iv-catheter.png",
+                    "audio": "http://localhost:8080/public/audio/4-5.mp3"
+                }
+            ]
+        },
+        {
+            "drawer": 5,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "Defib-Pads",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/defib-pads.png",
+                    "audio": "http://localhost:8080/public/audio/5-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "4.0 ETT UNCUFFED",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/ett.png",
+                    "audio": "http://localhost:8080/public/audio/5-2.mp3"
+                },
+                {
+                    "compartment": 3,
+                    "item": "PI Surgical Gloves",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/gloves.png",
+                    "audio": "http://localhost:8080/public/audio/5-3.mp3"
+                },
+                {
+                    "compartment": 4,
+                    "item": "N95 Respirator Mask",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/n95.png",
+                    "audio": "http://localhost:8080/public/audio/5-4.mp3"
+                }
+            ]
+        }
+    ],
+    "ledStates": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "isDeprecated": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ]
+}

@@ -1,0 +1,111 @@
+@use '../../styles/partials/resets' as *;
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.inventory-box {
+    border: 1px solid $available-color;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &--red {
+        border-color: $indicator-red;
+    }
+
+    &__image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    &__image {
+        width: auto;
+        height: auto;
+        max-width: 120px;
+        max-height: 120px;
+        object-fit: contain;
+    }
+
+    &__name {
+        font-size: 18px;
+        margin: 0 0 5px 0;
+    }
+
+    &__compartment {
+        font-size: 14px;
+        color: $hover-instruction-color;
+        margin: 0 0 10px 0;
+    }
+
+    &__quantity {
+        font-size: 16px;
+        margin: 0;
+    }
+}
+
+.indicator {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    &--blue {
+        background-color: $indicator-blue;
+    }
+
+    &--red {
+        background-color: $indicator-red;
+    }
+}
+
+.inventory-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+
+    &__card {
+        flex: 1;
+        min-width: 100px;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+
+        span {
+            font-size: 16px;
+        }
+    }
+
+    &__status {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+
+        &--available {
+            background-color: rgba($available-color, 0.2);
+            color: $available-color;
+        }
+
+        &--low-stock {
+            background-color: rgba($low-stock-color, 0.2);
+            color: $low-stock-color;
+        }
+    }
+}

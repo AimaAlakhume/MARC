@@ -1,0 +1,242 @@
+{
+    "inventory": [
+        {
+            "drawer": 1,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "Pliers",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/pliers.png",
+                    "audio": "http://localhost:8080/public/audio/1-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "Mouse",
+                    "count": 4,
+                    "image": "http://localhost:8080/public/images/mouse.png",
+                    "audio": "http://localhost:8080/public/audio/1-2.mp3"
+                },
+                {
+                    "compartment": 3,
+                    "item": "Goggles",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/goggles.png",
+                    "audio": "http://localhost:8080/public/audio/1-3.mp3"
+                },
+                {
+                    "compartment": 4,
+                    "item": "Craft Knife",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/craft-knife.png",
+                    "audio": "http://localhost:8080/public/audio/1-4.mp3"
+                }
+            ]
+        },
+        {
+            "drawer": 2,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "Wire",
+                    "count": 5,
+                    "image": "http://localhost:8080/public/images/wire.png",
+                    "audio": "http://localhost:8080/public/audio/2-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "Power Bank",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/power-bank.png",
+                    "audio": "http://localhost:8080/public/audio/2-2.mp3"
+                },
+                {
+                    "compartment": 3,
+                    "item": "Scotch Tape",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/scotch-tape.png",
+                    "audio": "http://localhost:8080/public/audio/2-3.mp3"
+                },
+                {
+                    "compartment": 4,
+                    "item": "Game Controller",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/controller.png",
+                    "audio": "http://localhost:8080/public/audio/2-4.mp3"
+                },
+                {
+                    "compartment": 5,
+                    "item": "Scissors",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/scissors.png",
+                    "audio": "http://localhost:8080/public/audio/2-5.mp3"
+                },
+                {
+                    "compartment": 6,
+                    "item": "White Glue",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/white-glue.png",
+                    "audio": "http://localhost:8080/public/audio/2-6.mp3"
+                }
+            ]
+        },
+        {
+            "drawer": 3,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "Super Glue",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/super-glue.png",
+                    "audio": "http://localhost:8080/public/audio/3-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "Sharpie",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/sharpie.png",
+                    "audio": "http://localhost:8080/public/audio/3-2.mp3"
+                },
+                {
+                    "compartment": 3,
+                    "item": "HDMI Cable",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/hdmi.png",
+                    "audio": "http://localhost:8080/public/audio/3-3.mp3"
+                },
+                {
+                    "compartment": 4,
+                    "item": "Pencil",
+                    "count": 11,
+                    "image": "http://localhost:8080/public/images/pencil.png",
+                    "audio": "http://localhost:8080/public/audio/3-4.mp3"
+                },
+                {
+                    "compartment": 5,
+                    "item": "Battery",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/battery.png",
+                    "audio": "http://localhost:8080/public/audio/3-5.mp3"
+                },
+                {
+                    "compartment": 6,
+                    "item": "Screw",
+                    "count": 10,
+                    "image": "http://localhost:8080/public/images/screw.png",
+                    "audio": "http://localhost:8080/public/audio/3-6.mp3"
+                }
+                ,
+                {
+                    "compartment": 7,
+                    "item": "Marker",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/marker.png",
+                    "audio": "http://localhost:8080/public/audio/3-7.mp3"
+                },
+                {
+                    "compartment": 8,
+                    "item": "SD Card",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/sd-card.png",
+                    "audio": "http://localhost:8080/public/audio/3-8.mp3"
+                }
+            ]
+        },
+        {
+            "drawer": 4,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "Gloves",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/glove.png",
+                    "audio": "http://localhost:8080/public/audio/4-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "Spray",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/spray.png",
+                    "audio": "http://localhost:8080/public/audio/4-2.mp3"
+                },
+                {
+                    "compartment": 3,
+                    "item": "Stapler",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/stapler.png",
+                    "audio": "http://localhost:8080/public/audio/4-3.mp3"
+                },
+                {
+                    "compartment": 4,
+                    "item": "Spanner",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/spanner.png",
+                    "audio": "http://localhost:8080/public/audio/4-4.mp3"
+                },
+                {
+                    "compartment": 5,
+                    "item": "Tape Measure",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/tape-measure.png",
+                    "audio": "http://localhost:8080/public/audio/4-5.mp3"
+                },
+                {
+                    "compartment": 6,
+                    "item": "Screwdriver",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/screwdriver.png",
+                    "audio": "http://localhost:8080/public/audio/4-6.mp3"
+                }
+            ]
+        },
+        {
+            "drawer": 5,
+            "compartments": [
+                {
+                    "compartment": 1,
+                    "item": "Extension Box",
+                    "count": 1,
+                    "image": "http://localhost:8080/public/images/extension-box.png",
+                    "audio": "http://localhost:8080/public/audio/5-1.mp3"
+                },
+                {
+                    "compartment": 2,
+                    "item": "Glue Gun",
+                    "count": 2,
+                    "image": "http://localhost:8080/public/images/glue-gun.png",
+                    "audio": "http://localhost:8080/public/audio/5-2.mp3"
+                },
+                {
+                    "compartment": 3,
+                    "item": "Camera",
+                    "count": 3,
+                    "image": "http://localhost:8080/public/images/camera.png",
+                    "audio": "http://localhost:8080/public/audio/5-3.mp3"
+                },
+                {
+                    "compartment": 4,
+                    "item": "Edge Guard",
+                    "count": 7,
+                    "image": "http://localhost:8080/public/images/edge-guard.png",
+                    "audio": "http://localhost:8080/public/audio/5-4.mp3"
+                }
+            ]
+        }
+    ],
+    "ledStates": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "isDeprecated": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        true
+    ]
+}
