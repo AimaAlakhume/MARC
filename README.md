@@ -169,7 +169,7 @@ Each participant completed the retrieval task under six conditions. The table sh
 | C5 Speech only | | | ✓ |
 | C6 Web interface + speech | ✓ | | ✓ |
 
-In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator switched on the LEDs for each item; the software does not control them. The operator delivered each cue within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item).
+In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator switched on the LEDs for each item with a remote control; the software does not control them. The operator delivered each cue within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item).
 
 <!-- FILL IN: describe how the operator triggered the speech clips in C5 (for example, by searching on a laptop hidden from the participant). -->
 
@@ -212,7 +212,7 @@ Then start the backend with `CUEBOT_CART=<name>` and set `VITE_CART=<name>` in `
 
 ## Hardware
 
-The parts list, costs, and assembly steps are in [`hardware/`](hardware/README.md). In short, the platform is a mobile drawer cart ($580) fitted with LED strips, a Bluetooth speaker, and wiring ($158), with the interface running on a laptop. The LEDs are operated by the Wizard-of-Oz operator rather than by the software. A Raspberry Pi 4B with a small screen (about $45) can replace the laptop for a self-contained cart.
+The parts list, costs, and assembly steps are in [`hardware/`](hardware/README.md). In short, the platform is a mobile drawer cart ($580) fitted with battery-powered, remote-controlled LED lights and a Bluetooth speaker ($158), with the interface running on a laptop. The lights are taped in place, so no wiring is needed, and the Wizard-of-Oz operator switches them with their remotes rather than through the software. A Raspberry Pi 4B with a small screen (about $45) can replace the laptop for a self-contained cart.
 
 ## Troubleshooting
 

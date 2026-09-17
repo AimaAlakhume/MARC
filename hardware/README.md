@@ -1,19 +1,20 @@
 # CueBot Hardware Build Guide
 
-CueBot is built from off-the-shelf parts. The complete platform used in the study cost **$738**. This guide lists the parts, explains how they fit together, and describes how to swap the laptop for a Raspberry Pi if you want a self-contained cart.
+CueBot is built from off-the-shelf parts and needs no soldering or wiring. The complete platform used in the study cost **$738**. This guide lists the parts, explains how they fit together, and describes how to swap the laptop for a Raspberry Pi if you want a self-contained cart.
 
 ## Parts list
 
-| Part | Purpose | Cost (USD) |
-|---|---|---|
-| Mobile cart platform with drawers <!-- FILL IN: model or link --> | The storage cart the robot is built on | $580 |
-| LED strips <!-- FILL IN: product, colour, and length --> | Light-blue indicators on each drawer front and inside each compartment | Included below |
-| LED switching <!-- FILL IN: e.g. remote, app, or manual switches --> | Lets the Wizard-of-Oz operator turn individual drawer and compartment LEDs on and off | Included below |
-| Bluetooth speaker <!-- FILL IN: model --> | Plays the speech cues | Included below |
-| Wiring and mounting hardware | Connects and attaches the LEDs | Included below |
-| **LEDs, speaker, and wiring (subtotal)** | | **$158** |
-| Laptop | Runs the web interface and plays audio | Existing lab hardware, no added cost |
-| **Total** | | **$738** |
+| Part | What it does | Link | Cost (USD) |
+|---|---|---|---|
+| Mobile emergency cart with drawers and dividers | The storage cart CueBot is built on | [Amazon](https://www.amazon.com/dp/B0D6GHMDFJ) | $580 |
+| Battery-powered, remote-controlled LED lights | Cues on each drawer front and inside each compartment | [Amazon](https://www.amazon.com/dp/B0H98QLLHJ) | Included below |
+| Bluetooth speaker | Plays the speech cues | [Amazon](https://www.amazon.com/dp/B07N985DN9) | Included below |
+| Batteries and strong adhesive tape (e.g. Gorilla Tape) | Power and mount the lights | Any brand | Included below |
+| **Lights, speaker, and mounting supplies (subtotal)** | | | **$158** |
+| Laptop | Runs the web interface and plays audio | Existing lab hardware | No added cost |
+| **Total** | | | **$738** |
+
+The specific light brand does not matter. Any small LED lights will work as long as they are **battery-powered** and **remote-controlled**. Prices change over time, so the costs above reflect what we paid.
 
 **Optional, for a self-contained cart:** a Raspberry Pi 4B (about $45) with a small screen and keyboard can replace the laptop. The web interface runs in any modern browser, so no code changes are needed.
 
@@ -21,13 +22,11 @@ CueBot is built from off-the-shelf parts. The complete platform used in the stud
 
 CueBot has three communication channels. Each one uses different hardware.
 
-**1. LED indicators (non-verbal cues)**
+**1. LED lights (non-verbal cues)**
 
-Each drawer has an LED on the outside of the cart, and each compartment has an LED inside its drawer. When an item is requested, the LED on the correct drawer flashes to show the user which level to open. Once the drawer is open, the LED on the correct compartment flashes to show exactly where the item is.
+One light is attached to the front of each drawer, and one light is attached inside each compartment. When an item is requested, the light on the correct drawer shows the user which level to open. Once the drawer is open, the light in the correct compartment shows exactly where the item is. The lights run on batteries and are held in place with adhesive tape, so no wiring is needed.
 
-The LEDs are not connected to the CueBot software. In the study, a hidden Wizard-of-Oz operator switched on the correct drawer and compartment LEDs for each item. This kept the LED cues independent of any sensing or detection errors. A future autonomous version could drive the same LEDs from the backend.
-
-<!-- FILL IN: describe how the LEDs were mounted and powered, and how the operator switched a specific LED on (e.g. remote, app, or switches). -->
+The lights are not connected to the CueBot software. In the study, a hidden Wizard-of-Oz operator switched on the lights for each item using their remote controls. This kept the light cues independent of any sensing or detection errors. A future autonomous version could replace the remote-controlled lights with lights driven by the backend.
 
 **2. Speaker (verbal cues)**
 
@@ -44,10 +43,16 @@ The laptop displays the web interface next to the cart. See the main [README](..
 ## Assembly steps
 
 1. **Prepare the cart.** Decide how many compartments each drawer will have and set up the dividers. The two layouts used in the study are listed in [`study-materials/`](../study-materials/README.md).
-2. **Install the drawer LEDs.** Attach one LED to the front of each drawer where it is easy to see from standing height.
-3. **Install the compartment LEDs.** Attach one LED inside each compartment, positioned so it is visible when the drawer is opened.
-4. **Connect and power the LEDs** so the operator can switch each drawer and compartment LED on its own. <!-- FILL IN: wiring and switching steps. -->
-5. **Mount the speaker.** Place the Bluetooth speaker on the top surface of the cart and pair it with the laptop (or Raspberry Pi). Set it as the default audio output.
-6. **Place the screen.** Put the laptop on or next to the cart where the user can see it while facing the drawers.
-7. **Stock the cart and update the inventory file.** Put each item in its compartment and make sure `backend/inventory-<cart>.json` lists the same drawer and compartment for every item. If you change the layout, also record new speech clips and add drawer images (see "Adapting CueBot to your own cart" in the main README).
-8. **Test each cue.** Search for one item from every drawer and check that the screen and speech point to the same place. Then have the operator switch on the LEDs for the same items and check that they match.
+2. **Prepare the lights.** Put batteries in every light and check that each one turns on and off with its remote. If the lights have a colour setting, choose one colour for all of them (the study used light blue).
+3. **Mount the drawer lights.** Tape one light to the front of each drawer where it is easy to see from standing height.
+4. **Mount the compartment lights.** Tape one light inside each compartment, positioned so it is visible when the drawer is opened and does not block the items.
+5. **Label the remotes.** Mark which remote (or remote button) controls which drawer or compartment light, so the operator can find the right one quickly during a session.
+6. **Mount the speaker.** Place the Bluetooth speaker on the top surface of the cart and pair it with the laptop (or Raspberry Pi). Set it as the default audio output.
+7. **Place the screen.** Put the laptop on or next to the cart where the user can see it while facing the drawers.
+8. **Stock the cart and update the inventory file.** Put each item in its compartment and make sure `backend/inventory-<cart>.json` lists the same drawer and compartment for every item. If you change the layout, also record new speech clips and add drawer images (see "Adapting CueBot to your own cart" in the main README).
+9. **Test each cue.** Search for one item from every drawer and check that the screen and speech point to the same place. Then have the operator switch on the lights for the same items and check that they match.
+
+## Tips
+
+- Keep spare batteries on hand. Lights that dim partway through a session are harder to notice.
+- Test the remotes from where the operator will sit. Some remotes need a clear line of sight to the light.
