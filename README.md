@@ -5,7 +5,7 @@ This repository accompanies the HRI 2027 submission *CueBot: Toward Multimodal G
 CueBot is a low-cost robotic cart that guides people to items stored in its drawers. It uses three communication channels:
 
 - **Web interface.** A diagram of the cart with the target drawer outlined, a pop-up with the drawer and compartment numbers, and a card with the item's name and photo. The item's name and quantity appear at the top of the screen.
-- **LED indicators.** Light-blue LEDs flash on the correct drawer, then on the correct compartment inside it. In the study, the LEDs were switched on by the hidden operator, not by this software.
+- **LED indicators.** Light-blue LEDs mark the correct drawer on the outside of the cart and the correct compartment inside it. In the study, the hidden operator switched on the lights for all of a condition's target items at once, not through this software.
 - **Speech.** A short clip announces the location, for example "Located in drawer two, compartment three." Speech can be turned on or off with the toggle next to the search bar.
 
 The whole platform costs about $660 and uses only off-the-shelf hardware and open-source software.
@@ -169,7 +169,7 @@ Each participant completed the retrieval task under six conditions. The table sh
 | C5 Speech only | | | ✓ |
 | C6 Web interface + speech | ✓ | | ✓ |
 
-In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator switched on the LEDs for each item with a remote control; the software does not control them. In C5 and C6, the hidden operator played each speech clip remotely; in C5, the participant could not see the web interface. The operator delivered each cue within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item).
+In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator used a remote control to switch on the LEDs for all five target items at the start cue, so every target drawer and compartment was lit at the same time; the software does not control the LEDs. In C5 and C6, the hidden operator played the speech clips remotely, one item at a time, within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item). In C5, the participant could not see the web interface.
 
 
 ## Adapting CueBot to your own cart

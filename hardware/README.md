@@ -28,11 +28,11 @@ CueBot has three communication channels. Each one uses different hardware.
 
 **1. LED indicators (non-verbal cues)**
 
-Each drawer has an LED light on the outside of the cart, and each compartment has an LED light inside its drawer. When an item is requested, the light on the correct drawer flashes to show the user which level to open. Once the drawer is open, the light in the correct compartment flashes to show exactly where the item is.
+Each drawer has an LED light on the outside of the cart, and each compartment has an LED light inside its drawer. The drawer light shows the user which drawer to open, and the compartment light shows exactly where the item is inside it. In the study, the lights for all of a condition's target items came on at the same time, so users could see every drawer they needed at once.
 
 The lights run on their own batteries and are not connected to the CueBot software. In the study, a hidden Wizard-of-Oz operator switched them on with the lights' remote control.
 
-**Lighting only the lights you want.** One remote controls every light in a pack, so the study used each light's twist-on cover as an on/off switch. When a light's cover is twisted tight, the light is connected and responds to the remote. When the cover is twisted loose, the light is disconnected and stays off no matter what the remote does. By loosening the covers of all lights except the target drawer and compartment, the operator could use one remote to light only those. This kept the LED cues independent of any sensing or detection errors. A future autonomous version could replace the remote-controlled lights with LEDs driven by the backend.
+**Lighting only the lights you want.** One remote controls every light in a pack, so the study used each light's twist-on cover as an on/off switch. When a light's cover is twisted tight, the light is connected and responds to the remote. When the cover is twisted loose, the light is disconnected and stays off no matter what the remote does. Before each LED condition, the covers were tightened on the lights for that condition's target drawers and compartments and loosened on all the others. At the start cue, one press of the remote then switched on every target light at once, and no others. This kept the LED cues independent of any sensing or detection errors. A future autonomous version could replace the remote-controlled lights with LEDs driven by the backend.
 
 **2. Speaker (verbal cues)**
 
@@ -55,5 +55,5 @@ The laptop displays the web interface next to the cart. See the main [README](..
 5. **Mount the speaker.** Place the Bluetooth speaker on the top surface of the cart and pair it with the laptop (or Raspberry Pi). Set it as the default audio output.
 6. **Place the screen.** Put the laptop on or next to the cart where the user can see it while facing the drawers.
 7. **Stock the cart and update the inventory file.** Put each item in its compartment and make sure `backend/inventory-<cart>.json` lists the same drawer and compartment for every item. If you change the layout, also record new speech clips and add drawer images (see "Adapting CueBot to your own cart" in the main README).
-8. **Test each cue.** Search for one item from every drawer and check that the screen and speech point to the same place. Then have the operator loosen every cover except the ones for those items, switch the lights on with the remote, and check that only the right lights come on.
+8. **Test each cue.** Search for one item from every drawer and check that the screen and speech point to the same place. Then tighten the covers for those items' lights, loosen all the others, press the remote, and check that only the right lights come on.
 9. **Check the batteries before each session.** Dim lights are easy to miss, so replace batteries when the lights start to fade.
