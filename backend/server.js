@@ -99,6 +99,14 @@ app.get('/api/data', (req, res) => {
     }
 });
 
+server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+        console.error(`Port ${PORT} is already in use. Stop the other program using it, or start CueBot on another port (e.g. PORT=8081 npm start) and update VITE_API_URL in frontend/.env.`);
+        process.exit(1);
+    }
+    throw err;
+});
+
 server.listen(PORT, () => {
     console.log(`CueBot backend listening on http://localhost:${PORT} (cart: ${CART})`);
 });
