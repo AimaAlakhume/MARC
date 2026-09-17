@@ -49,7 +49,6 @@ The laptop displays the web interface next to the cart. See the main [README](..
 ## Assembly steps
 
 1. **Prepare the cart.** Decide how many compartments each drawer will have and set up the dividers. The two layouts used in the study are listed in [`study-materials/`](../study-materials/README.md).
-2. **Prepare the LED lights.** Insert batteries, then use the remote to check that each light turns on and to set its colour to light blue. Check that twisting each cover loose turns that light off even when the remote is used.
 3. **Attach the drawer lights.** Tape one light to the front of each drawer with Gorilla Tape, where it is easy to see from standing height.
 4. **Attach the compartment lights.** Tape one light inside each compartment, positioned so it is visible when the drawer is opened and does not block the items.
 5. **Mount the speaker.** Place the Bluetooth speaker on the top surface of the cart and pair it with the laptop (or Raspberry Pi). Set it as the default audio output.
