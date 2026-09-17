@@ -169,7 +169,7 @@ Each participant completed the retrieval task under six conditions. The table sh
 | C5 Speech only | | | ✓ |
 | C6 Web interface + speech | ✓ | | ✓ |
 
-In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator switched on the LEDs for each item with a remote control; the software does not control them. In C5 and C6, the speech clips were played by the CueBot web interface; in C5, the participant could not see the interface. The operator delivered each cue within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item).
+In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator switched on the LEDs for each item with a remote control; the software does not control them. In C5 and C6, the hidden operator played each speech clip remotely; in C5, the participant could not see the web interface. The operator delivered each cue within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item).
 
 
 ## Adapting CueBot to your own cart
