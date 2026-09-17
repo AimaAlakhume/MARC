@@ -212,7 +212,7 @@ Then start the backend with `CUEBOT_CART=<name>` and set `VITE_CART=<name>` in `
 
 ## Hardware
 
-The parts list, costs, and assembly steps are in [`hardware/`](hardware/README.md). In short, the platform is a mobile drawer cart ($580) fitted with battery-powered, remote-controlled LED lights and a Bluetooth speaker ($158), with the interface running on a laptop. The lights are taped in place, so no wiring is needed, and the Wizard-of-Oz operator switches them with their remotes rather than through the software. A Raspberry Pi 4B with a small screen (about $45) can replace the laptop for a self-contained cart.
+The parts list, costs, and assembly steps are in [`hardware/`](hardware/README.md). In short, the platform is a mobile drawer cart fitted with battery-powered, remote-controlled LED lights and a Bluetooth speaker, with the interface running on a laptop. The lights are taped in place, so no wiring is needed, and the Wizard-of-Oz operator switches them with their remotes rather than through the software. A Raspberry Pi 4B with a small screen (about $45) can replace the laptop for a self-contained cart.
 
 ## Troubleshooting
 
