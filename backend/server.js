@@ -1,5 +1,7 @@
 // CueBot backend: serves the cart inventory, item images, and speech clips
-// to the web interface, and relays inventory/LED state updates over Socket.IO.
+// to the web interface, and relays inventory state updates over Socket.IO.
+// The physical LEDs are operated by the Wizard-of-Oz operator, not by this
+// server; the ledStates field is only used by the earlier inventory-tracker view.
 
 import express from 'express';
 import http from 'http';

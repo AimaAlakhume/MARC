@@ -5,12 +5,12 @@ This repository accompanies the HRI 2027 submission *CueBot: Toward Multimodal G
 CueBot is a low-cost robotic cart that guides people to items stored in its drawers. It uses three communication channels:
 
 - **Web interface.** A diagram of the cart with the target drawer outlined, a pop-up with the drawer and compartment numbers, and a card with the item's name and photo. The item's name and quantity appear at the top of the screen.
-- **LED indicators.** Light-blue LEDs flash on the correct drawer, then on the correct compartment inside it.
+- **LED indicators.** Light-blue LEDs flash on the correct drawer, then on the correct compartment inside it. In the study, the LEDs were switched on by the hidden operator, not by this software.
 - **Speech.** A short clip announces the location, for example "Located in drawer two, compartment three." Speech can be turned on or off with the toggle next to the search bar.
 
 The whole platform costs $738 and uses only off-the-shelf hardware and open-source software.
 
-> **About the study setup.** The study used a Wizard-of-Oz protocol: a hidden operator delivered the guidance cues, so that the effect of each communication channel could be measured separately from sensing errors. This repository contains the software used in the study. It does not include autonomous item detection.
+> **About the study setup.** The study used a Wizard-of-Oz protocol: a hidden operator delivered the guidance cues, so that the effect of each communication channel could be measured separately from sensing errors. The operator switched the LED indicators on by hand, so this repository contains no LED control code. It also does not include autonomous item detection. What it does contain is the web interface and speech system used in the study.
 
 ![CueBot web interface during a search](docs/interface.png)
 
@@ -62,7 +62,7 @@ cuebot/
 - [Node.js](https://nodejs.org/) version 18 or later (this includes npm)
 - A current version of Chrome, Edge, Firefox, or Safari
 
-You do not need any hardware to try the interface. Search, the cart diagram, and speech all work on an ordinary computer. The LEDs are only needed on the physical cart.
+You do not need any hardware to try the interface. Search, the cart diagram, and speech all work on an ordinary computer. The LEDs are part of the physical cart and are operated separately from the software.
 
 ## Quick start
 
@@ -169,9 +169,9 @@ Each participant completed the retrieval task under six conditions. The table sh
 | C5 Speech only | | | ✓ |
 | C6 Web interface + speech | ✓ | | ✓ |
 
-In C2 and C3, the speech toggle was turned off. The operator delivered each cue within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item).
+In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator switched on the LEDs for each item; the software does not control them. The operator delivered each cue within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item).
 
-<!-- FILL IN: describe how the operator delivered speech in C5 and LED cues in C3/C4 (for example, searching on a laptop hidden from the participant, and switching LEDs with a remote). -->
+<!-- FILL IN: describe how the operator triggered the speech clips in C5 (for example, by searching on a laptop hidden from the participant). -->
 
 ## Adapting CueBot to your own cart
 
@@ -212,7 +212,7 @@ Then start the backend with `CUEBOT_CART=<name>` and set `VITE_CART=<name>` in `
 
 ## Hardware
 
-The parts list, costs, and assembly steps are in [`hardware/`](hardware/README.md). In short, the platform is a mobile drawer cart ($580) fitted with LED strips, a Bluetooth speaker, and wiring ($158), with the interface running on a laptop. A Raspberry Pi 4B with a small screen (about $45) can replace the laptop for a self-contained cart.
+The parts list, costs, and assembly steps are in [`hardware/`](hardware/README.md). In short, the platform is a mobile drawer cart ($580) fitted with LED strips, a Bluetooth speaker, and wiring ($158), with the interface running on a laptop. The LEDs are operated by the Wizard-of-Oz operator rather than by the software. A Raspberry Pi 4B with a small screen (about $45) can replace the laptop for a self-contained cart.
 
 ## Troubleshooting
 

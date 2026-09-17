@@ -8,10 +8,10 @@ CueBot is built from off-the-shelf parts. The complete platform used in the stud
 |---|---|---|
 | Mobile cart platform with drawers <!-- FILL IN: model or link --> | The storage cart the robot is built on | $580 |
 | LED strips <!-- FILL IN: product, colour, and length --> | Light-blue indicators on each drawer front and inside each compartment | Included below |
-| LED controller <!-- FILL IN: e.g. remote, app, or microcontroller --> | Turns individual drawer and compartment LEDs on and off | Included below |
+| LED switching <!-- FILL IN: e.g. remote, app, or manual switches --> | Lets the Wizard-of-Oz operator turn individual drawer and compartment LEDs on and off | Included below |
 | Bluetooth speaker <!-- FILL IN: model --> | Plays the speech cues | Included below |
 | Wiring and mounting hardware | Connects and attaches the LEDs | Included below |
-| **LEDs, speaker, controller, and wiring (subtotal)** | | **$158** |
+| **LEDs, speaker, and wiring (subtotal)** | | **$158** |
 | Laptop | Runs the web interface and plays audio | Existing lab hardware, no added cost |
 | **Total** | | **$738** |
 
@@ -25,7 +25,9 @@ CueBot has three communication channels. Each one uses different hardware.
 
 Each drawer has an LED on the outside of the cart, and each compartment has an LED inside its drawer. When an item is requested, the LED on the correct drawer flashes to show the user which level to open. Once the drawer is open, the LED on the correct compartment flashes to show exactly where the item is.
 
-<!-- FILL IN: describe how the LEDs were mounted and wired (one strip segment per drawer and per compartment?), how they are powered, and how the operator turned a specific LED on during the study. -->
+The LEDs are not connected to the CueBot software. In the study, a hidden Wizard-of-Oz operator switched on the correct drawer and compartment LEDs for each item. This kept the LED cues independent of any sensing or detection errors. A future autonomous version could drive the same LEDs from the backend.
+
+<!-- FILL IN: describe how the LEDs were mounted and powered, and how the operator switched a specific LED on (e.g. remote, app, or switches). -->
 
 **2. Speaker (verbal cues)**
 
@@ -44,8 +46,8 @@ The laptop displays the web interface next to the cart. See the main [README](..
 1. **Prepare the cart.** Decide how many compartments each drawer will have and set up the dividers. The two layouts used in the study are listed in [`study-materials/`](../study-materials/README.md).
 2. **Install the drawer LEDs.** Attach one LED to the front of each drawer where it is easy to see from standing height.
 3. **Install the compartment LEDs.** Attach one LED inside each compartment, positioned so it is visible when the drawer is opened.
-4. **Connect and power the LEDs.** <!-- FILL IN: wiring and controller steps. -->
+4. **Connect and power the LEDs** so the operator can switch each drawer and compartment LED on its own. <!-- FILL IN: wiring and switching steps. -->
 5. **Mount the speaker.** Place the Bluetooth speaker on the top surface of the cart and pair it with the laptop (or Raspberry Pi). Set it as the default audio output.
 6. **Place the screen.** Put the laptop on or next to the cart where the user can see it while facing the drawers.
 7. **Stock the cart and update the inventory file.** Put each item in its compartment and make sure `backend/inventory-<cart>.json` lists the same drawer and compartment for every item. If you change the layout, also record new speech clips and add drawer images (see "Adapting CueBot to your own cart" in the main README).
-8. **Test each cue.** Search for one item from every drawer and check that the screen, speech, and LEDs all point to the same place.
+8. **Test each cue.** Search for one item from every drawer and check that the screen and speech point to the same place. Then have the operator switch on the LEDs for the same items and check that they match.
