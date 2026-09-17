@@ -8,7 +8,7 @@ CueBot is a low-cost robotic cart that guides people to items stored in its draw
 - **LED indicators.** Light-blue LEDs flash on the correct drawer, then on the correct compartment inside it. In the study, the LEDs were switched on by the hidden operator, not by this software.
 - **Speech.** A short clip announces the location, for example "Located in drawer two, compartment three." Speech can be turned on or off with the toggle next to the search bar.
 
-The whole platform costs $738 and uses only off-the-shelf hardware and open-source software.
+The whole platform costs about $660 and uses only off-the-shelf hardware and open-source software.
 
 > **About the study setup.** The study used a Wizard-of-Oz protocol: a hidden operator delivered the guidance cues, so that the effect of each communication channel could be measured separately from sensing errors. The operator switched the LED indicators on by hand, so this repository contains no LED control code. It also does not include autonomous item detection. What it does contain is the web interface and speech system used in the study.
 
@@ -169,9 +169,8 @@ Each participant completed the retrieval task under six conditions. The table sh
 | C5 Speech only | | | ✓ |
 | C6 Web interface + speech | ✓ | | ✓ |
 
-In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator switched on the LEDs for each item with a remote control; the software does not control them. The operator delivered each cue within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item).
+In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator switched on the LEDs for each item with a remote control; the software does not control them. In C5 and C6, the speech clips were played by the CueBot web interface; in C5, the participant could not see the interface. The operator delivered each cue within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item).
 
-<!-- FILL IN: describe how the operator triggered the speech clips in C5 (for example, by searching on a laptop hidden from the participant). -->
 
 ## Adapting CueBot to your own cart
 
