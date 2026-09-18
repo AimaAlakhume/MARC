@@ -49,10 +49,10 @@ The laptop displays the web interface next to the cart. See the main [README](..
 ## Assembly steps
 
 1. **Prepare the cart.** Decide how many compartments each drawer will have and set up the dividers. The two layouts used in the study are listed in [`study-materials/`](../study-materials/README.md).
-3. **Attach the drawer lights.** Tape one light to the front of each drawer with Gorilla Tape, where it is easy to see from standing height.
-4. **Attach the compartment lights.** Tape one light inside each compartment, positioned so it is visible when the drawer is opened and does not block the items.
-5. **Mount the speaker.** Place the Bluetooth speaker on the top surface of the cart and pair it with the laptop (or Raspberry Pi). Set it as the default audio output.
-6. **Place the screen.** Put the laptop on or next to the cart where the user can see it while facing the drawers.
-7. **Stock the cart and update the inventory file.** Put each item in its compartment and make sure `backend/inventory-<cart>.json` lists the same drawer and compartment for every item. If you change the layout, also record new speech clips and add drawer images (see "Adapting CueBot to your own cart" in the main README).
-8. **Test each cue.** Search for one item from every drawer and check that the screen and speech point to the same place. Then tighten the covers for those items' lights, loosen all the others, press the remote, and check that only the right lights come on.
-9. **Check the batteries before each session.** Dim lights are easy to miss, so replace batteries when the lights start to fade.
+2. **Attach the drawer lights.** Tape one light to the front of each drawer with Gorilla Tape, where it is easy to see from standing height.
+3. **Attach the compartment lights.** Tape one light inside each compartment, positioned so it is visible when the drawer is opened and does not block the items.
+4. **Mount the speaker.** Place the Bluetooth speaker on the top surface of the cart and pair it with the laptop (or Raspberry Pi). Set it as the default audio output.
+5. **Place the screen.** Put the laptop on or next to the cart where the user can see it while facing the drawers.
+6. **Stock the cart and update the inventory file.** Put each item in its compartment and make sure `backend/inventory-<cart>.json` lists the same drawer and compartment for every item. If you change the layout, also record new speech clips and add drawer images (see "Adapting CueBot to your own cart" in the main README).
+7. **Test each cue.** Search for one item from every drawer and check that the screen and speech point to the same place. Then tighten the covers for those items' lights, loosen all the others, press the remote, and check that only the right lights come on.
+8. **Check the batteries before each session.** Dim lights are easy to miss, so replace batteries when the lights start to fade.
