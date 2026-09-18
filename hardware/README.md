@@ -14,7 +14,7 @@ The specific products below are the ones used in the study. Any equivalent produ
 | Mounting tape | Gorilla Tape | Attaches the LED lights to the cart | A few dollars |
 | Batteries | Coin-cell batteries for the LED lights | Powers the LED lights | Varies |
 | Laptop | Any laptop with a web browser | Runs the web interface and plays audio | Existing hardware |
-| **Total** | | | **About $660**, plus tape and batteries |
+| **Total** | | | **$658**, plus tape and batteries |
 
 **How many LED lights you need.** You need one light inside each compartment and one on the outside of each drawer. For the layperson cart in the study (five drawers with 4, 6, 8, 6, and 4 compartments), that is 28 + 5 = 33 lights. The study used four 10-packs (40 lights). For another layout, add up the compartments, add the number of drawers, and round up to the next 10-pack.
 

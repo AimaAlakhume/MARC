@@ -8,9 +8,11 @@ CueBot is a low-cost robotic cart that guides people to items stored in its draw
 - **LED indicators.** Light-blue LEDs mark the correct drawer on the outside of the cart and the correct compartment inside it. In the study, the hidden operator switched on the lights for all of a condition's target items at once, not through this software.
 - **Speech.** A short clip announces the location, for example "Located in drawer two, compartment three." Speech can be turned on or off with the toggle next to the search bar.
 
-The whole platform costs about $660 and uses only off-the-shelf hardware and open-source software.
+The whole platform costs about $658 and uses only off-the-shelf hardware and open-source software.
 
 > **About the study setup.** The study used a Wizard-of-Oz protocol: a hidden operator delivered the guidance cues, so that the effect of each communication channel could be measured separately from sensing errors. The operator switched the LED indicators on by hand, so this repository contains no LED control code. It also does not include autonomous item detection. What it does contain is the web interface and speech system used in the study.
+
+> **Note on terminology.** The paper refers to the first subgroup as *non-clinicians*. The code and data files use `layperson`, the label used during data collection.
 
 ![CueBot web interface during a search](docs/interface.png)
 
