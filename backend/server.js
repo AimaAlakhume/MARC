@@ -1,4 +1,4 @@
-// CueBot backend: serves the cart inventory, item images, and speech clips
+// MARC backend: serves the cart inventory, item images, and speech clips
 // to the web interface, and relays inventory state updates over Socket.IO.
 // The physical LEDs are operated by the Wizard-of-Oz operator, not by this
 // server; the ledStates field is only used by the earlier inventory-tracker view.
@@ -15,8 +15,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Which cart layout to load: "layperson" (general-purpose supplies) or
-// "rn" (medical crash-cart supplies). Set with the CUEBOT_CART variable.
-const CART = process.env.CUEBOT_CART || 'layperson';
+// "rn" (medical crash-cart supplies). Set with the MARC_CART variable.
+const CART = process.env.MARC_CART || 'layperson';
 const PORT = Number(process.env.PORT) || 8080;
 const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || 'http://localhost:5173';
 
@@ -103,12 +103,12 @@ app.get('/api/data', (req, res) => {
 
 server.on('error', (err) => {
     if (err.code === 'EADDRINUSE') {
-        console.error(`Port ${PORT} is already in use. Stop the other program using it, or start CueBot on another port (e.g. PORT=8081 npm start) and update VITE_API_URL in frontend/.env.`);
+        console.error(`Port ${PORT} is already in use. Stop the other program using it, or start MARC on another port (e.g. PORT=8081 npm start) and update VITE_API_URL in frontend/.env.`);
         process.exit(1);
     }
     throw err;
 });
 
 server.listen(PORT, () => {
-    console.log(`CueBot backend listening on http://localhost:${PORT} (cart: ${CART})`);
+    console.log(`MARC backend listening on http://localhost:${PORT} (cart: ${CART})`);
 });

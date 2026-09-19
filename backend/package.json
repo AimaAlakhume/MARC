@@ -1,14 +1,14 @@
 {
-  "name": "cuebot-backend",
+  "name": "MARC-backend",
   "version": "1.0.0",
-  "description": "CueBot backend: inventory data, item images, and speech clips for the web interface",
+  "description": "MARC backend: inventory data, item images, and speech clips for the web interface",
   "main": "server.js",
   "type": "module",
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "start:layperson": "CUEBOT_CART=layperson node server.js",
-    "start:rn": "CUEBOT_CART=rn node server.js",
+    "start:layperson": "MARC_CART=layperson node server.js",
+    "start:rn": "MARC_CART=rn node server.js",
     "dev": "node --watch server.js"
   },
   "engines": {

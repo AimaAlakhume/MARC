@@ -4,7 +4,7 @@
 export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 // Which cart diagram to show: "layperson" or "rn".
-// This should match the CUEBOT_CART setting on the backend.
+// This should match the MARC_CART setting on the backend.
 export const CART = import.meta.env.VITE_CART || 'layperson';
 
 // Cart diagrams: crash-cart.png is the default view, and crash-cart-d{N}.png

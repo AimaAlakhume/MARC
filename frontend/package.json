@@ -1,5 +1,5 @@
 {
-  "name": "cuebot-frontend",
+  "name": "MARC-frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -29,7 +29,7 @@
     "sass": "^1.77.5",
     "vite": "^7.0.6"
   },
-  "description": "CueBot web interface",
+  "description": "MARC web interface",
   "engines": {
     "node": ">=18"
   },

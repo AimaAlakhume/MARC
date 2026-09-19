@@ -1,6 +1,6 @@
 # Study Materials
 
-This folder documents the two carts used in the CueBot study: what each cart held, where each item was, and which items participants retrieved in each condition.
+This folder documents the two carts used in the MARC study: what each cart held, where each item was, and which items participants retrieved in each condition.
 
 The inventory tables are generated from the files the software loads (`backend/inventory-layperson.json` and `backend/inventory-rn.json`), so they match exactly what the interface shows. Each item's drawer and compartment is also the location announced by the speech cue ("Located in drawer {drawer}, compartment {compartment}"). Item photos are in `backend/public/images-layperson/` and `backend/public/images-rn/`.
 

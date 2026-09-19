@@ -1,8 +1,8 @@
-# CueBot: Toward Multimodal Guidance for Cart-Based Human-Robot Collaboration
+# MARC: Toward Multimodal Guidance for Cart-Based Human-Robot Collaboration
 
-This repository accompanies the HRI 2027 submission *CueBot: Toward Multimodal Guidance for Cart-Based Human-Robot Collaboration*. It contains the CueBot web interface and backend, the hardware build guide, and documentation of the supplies used in the user study.
+This repository accompanies the HRI 2027 submission *MARC: Toward Multimodal Guidance for Cart-Based Human-Robot Collaboration*. It contains the MARC web interface and backend, the hardware build guide, and documentation of the supplies used in the user study.
 
-CueBot is a low-cost robotic cart that guides people to items stored in its drawers. It uses three communication channels:
+MARC is a low-cost robotic cart that guides people to items stored in its drawers. It uses three communication channels:
 
 - **Web interface.** A diagram of the cart with the target drawer outlined, a pop-up with the drawer and compartment numbers, and a card with the item's name and photo. The item's name and quantity appear at the top of the screen.
 - **LED indicators.** Light-blue LEDs mark the correct drawer on the outside of the cart and the correct compartment inside it. In the study, the hidden operator switched on the lights for all of a condition's target items at once, not through this software.
@@ -14,7 +14,7 @@ The whole platform costs about $658 and uses only off-the-shelf hardware and ope
 
 > **Note on terminology.** The paper refers to the first subgroup as *non-clinicians*. The code and data files use `layperson`, the label used during data collection.
 
-![CueBot web interface during a search](docs/interface.png)
+![MARC web interface during a search](docs/interface.png)
 
 ## Contents
 
@@ -25,7 +25,7 @@ The whole platform costs about $658 and uses only off-the-shelf hardware and ope
 - [Configuration](#configuration)
 - [Using the interface](#using-the-interface)
 - [Study conditions](#study-conditions)
-- [Adapting CueBot to your own cart](#adapting-cuebot-to-your-own-cart)
+- [Adapting MARC to your own cart](#adapting-MARC-to-your-own-cart)
 - [Hardware](#hardware)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
@@ -33,7 +33,7 @@ The whole platform costs about $658 and uses only off-the-shelf hardware and ope
 ## Repository structure
 
 ```
-cuebot/
+MARC/
 ├── backend/                     Node.js/Express server
 │   ├── server.js                Serves inventory data, item photos, and speech clips
 │   ├── inventory-layperson.json Layperson cart: items and their locations
@@ -68,7 +68,7 @@ You do not need any hardware to try the interface. Search, the cart diagram, and
 
 ## Quick start
 
-**1. Download the code** and open a terminal in the `cuebot` folder.
+**1. Download the code** and open a terminal in the `MARC` folder.
 
 **2. Install the dependencies** for the backend and the frontend:
 
@@ -87,7 +87,7 @@ cd backend
 npm start
 ```
 
-You should see `CueBot backend listening on http://localhost:8080 (cart: layperson)`. Leave this terminal open.
+You should see `MARC backend listening on http://localhost:8080 (cart: layperson)`. Leave this terminal open.
 
 **4. Start the frontend.** Open a second terminal and run:
 
@@ -128,7 +128,7 @@ VITE_CART=rn
 
 Then restart `npm run dev`.
 
-On Windows (PowerShell), start the backend with `$env:CUEBOT_CART="rn"; npm start` instead.
+On Windows (PowerShell), start the backend with `$env:MARC_CART="rn"; npm start` instead.
 
 ## Configuration
 
@@ -138,7 +138,7 @@ Both parts of the system work without any configuration. These settings are only
 
 | Variable | What it does | Default |
 |---|---|---|
-| `CUEBOT_CART` | Which inventory file to load (`layperson` or `rn`) | `layperson` |
+| `MARC_CART` | Which inventory file to load (`layperson` or `rn`) | `layperson` |
 | `PORT` | Port the backend listens on | `8080` |
 | `FRONTEND_ORIGIN` | Address of the frontend, used for Socket.IO | `http://localhost:5173` |
 
@@ -174,9 +174,9 @@ Each participant completed the retrieval task under six conditions. The table sh
 In C2 and C3, the speech toggle was turned off. In C3 and C4, the hidden operator used a remote control to switch on the LEDs for all five target items at the start cue, so every target drawer and compartment was lit at the same time; the software does not control the LEDs. In C5 and C6, the hidden operator played the speech clips remotely, one item at a time, within 2 seconds of the participant finishing the previous item (or of the start cue, for the first item). In C5, the participant could not see the web interface.
 
 
-## Adapting CueBot to your own cart
+## Adapting MARC to your own cart
 
-CueBot is not tied to a particular cart. To set it up for a new one, you need four things: an inventory file, item photos, speech clips, and drawer images.
+MARC is not tied to a particular cart. To set it up for a new one, you need four things: an inventory file, item photos, speech clips, and drawer images.
 
 **1. Inventory file.** Create `backend/inventory-<name>.json`, following the format of the existing files:
 
@@ -209,7 +209,7 @@ Each compartment holds one item. `count` is the quantity shown in the interface.
 
 **4. Drawer images.** Create `frontend/src/assets/cart-<name>/` containing `crash-cart.png` (the cart with no drawer highlighted) and `crash-cart-d1.png`, `crash-cart-d2.png`, and so on, each with one drawer outlined.
 
-Then start the backend with `CUEBOT_CART=<name>` and set `VITE_CART=<name>` in `frontend/.env`.
+Then start the backend with `MARC_CART=<name>` and set `VITE_CART=<name>` in `frontend/.env`.
 
 ## Hardware
 
@@ -219,13 +219,13 @@ The parts list, costs, and assembly steps are in [`hardware/`](hardware/README.m
 
 **"Failed to connect to the inventory server."** The backend is not running, or it is on a different port than the frontend expects. Start the backend, or check that `VITE_API_URL` matches its address, then click **Try Again**.
 
-**The search finds the wrong kind of items** (for example, office supplies when you expected medical supplies). The backend and frontend are set to different carts. Make sure `CUEBOT_CART` and `VITE_CART` match, then restart both.
+**The search finds the wrong kind of items** (for example, office supplies when you expected medical supplies). The backend and frontend are set to different carts. Make sure `MARC_CART` and `VITE_CART` match, then restart both.
 
 **No speech.** Check that the speaker toggle is on, that your computer's volume is up, and that the correct audio output (for example, the Bluetooth speaker) is selected. Some browsers also need you to click on the page before they will play sound.
 
 **"Port already in use."** Another program is using port 8080 or 5173. Stop that program, or change `PORT` (backend) and `VITE_API_URL` (frontend).
 
-**`npm install` fails.** Check your Node.js version with `node --version`. CueBot needs version 18 or later.
+**`npm install` fails.** Check your Node.js version with `node --version`. MARC needs version 18 or later.
 
 ## License
 
